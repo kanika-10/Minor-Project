@@ -1,0 +1,680 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <title>Track Status</title>
+    <style>
+      .main {
+  background: linear-gradient(
+      to top,
+      rgba(7, 72, 126, 0.411) 50%,
+      rgba(33, 164, 216, 0.5) 50%
+    ),
+    url(1.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.navbar {
+  width: 1600px;
+  height: 110px;
+  margin-left: -70px;
+  background-color: #000000;
+  /* background-size: 400px; */
+}
+
+.icon {
+  width: 200px;
+  float: left;
+  height: 70px;
+}
+
+.logo {
+  font-size: 10px;
+  margin-left: 60px;
+  margin-right: 140px;
+  float: left;
+  padding-top: 15px;
+  margin-top: 5px;
+}
+
+.menu {
+  width: 400px;
+  float: left;
+  height: 70px;
+}
+
+ul {
+  float: left;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul li {
+  list-style: none;
+  margin-left: 100px;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+ul li a {
+  text-decoration: none;
+  color: rgb(241, 248, 247);
+  font-family: Arial;
+  font-weight: bold;
+  transition: 0.4s ease-in-out;
+}
+
+ul li a:hover {
+  color: #212fb1;
+}
+
+.login {
+  width: 330px;
+  float: left;
+  margin-left: 270px;
+  margin-top: 15px;
+}
+
+.btn {
+  width: 100px;
+  height: 40px;
+  font-size: 18px;
+  border-radius: 10px;
+  background: #08d846;
+  border: 2px solid black;
+  margin-top: 20px;
+  margin-left: 180px;
+  color: #fff;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+.btn:hover {
+  color: rgb(3, 3, 3);
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.nav-icons{
+  font-size: 20px;
+  text-align: center;
+  align-items: center;
+  margin-left: 15px;
+}
+
+      #status {
+        background-color: aqua;
+      }
+      #search {
+        margin-left: 1200px;
+      }
+
+      .track_status{
+        position: relative;
+    text-align: center;
+    margin-top: 2px;
+    border-radius: 5px;
+    border: 2px solid #618f98;
+    /* color: #ff904b; */
+    background-color: rgb(203 227 229);
+      }
+      
+      body {
+            background: #fbfbfd;
+        }
+    
+        .new_footer_area {
+            background: #fbfbfd;
+        }
+    
+    
+        .new_footer_top {
+            padding: 20px 0px 200px;
+            position: relative;
+            overflow-x: hidden;
+        }
+    
+        .new_footer_area .footer_bottom {
+            padding-top: 5px;
+            padding-bottom: 50px;
+        }
+    
+        .footer_bottom {
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 20px;
+            color: #7f88a6;
+            padding: 27px 0px;
+        }
+    
+        .new_footer_top .company_widget p {
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 28px;
+            color: #6a7695;
+            margin-bottom: 20px;
+        }
+    
+        .new_footer_top .company_widget .f_subscribe_two .btn_get {
+            border-width: 1px;
+            margin-top: 20px;
+        }
+    
+        .btn_get_two:hover {
+            background: transparent;
+            color: #5e2ced;
+        }
+    
+        .btn_get:hover {
+            color: #fff;
+            background: #6754e2;
+            border-color: #6754e2;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+        }
+    
+        a:hover,
+        a:focus,
+        .btn:hover,
+        .btn:focus,
+        button:hover,
+        button:focus {
+            text-decoration: none;
+            outline: none;
+        }
+    
+    
+    
+        .new_footer_top .f_widget.about-widget .f_list li a:hover {
+            color: #5e2ced;
+        }
+    
+        .new_footer_top .f_widget.about-widget .f_list li {
+            margin-bottom: 11px;
+        }
+    
+        .f_widget.about-widget .f_list li:last-child {
+            margin-bottom: 0px;
+        }
+    
+        .f_widget.about-widget .f_list li {
+            margin-bottom: 15px;
+        }
+    
+        .f_widget.about-widget .f_list {
+            margin-bottom: 0px;
+        }
+    
+        .new_footer_top .f_social_icon a {
+            width: 44px;
+            height: 44px;
+            line-height: 43px;
+            background: transparent;
+            border: 1px solid #e2e2eb;
+            font-size: 24px;
+           
+            margin-left: 100px;
+            padding-left: 100px;
+            padding-right: 120px;
+        }
+    
+        .f_social_icon a {
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            font-size: 14px;
+            line-height: 45px;
+            color: #858da8;
+            display: inline-block;
+            background: #ebeef5;
+            text-align: center;
+            -webkit-transition: all 0.2s linear;
+            -o-transition: all 0.2s linear;
+            transition: all 0.2s linear;
+        }
+    
+        .ti-facebook:before {
+            content: "\e741";
+        }
+    
+        .ti-twitter-alt:before {
+            content: "\e74b";
+        }
+    
+        .ti-vimeo-alt:before {
+            content: "\e74a";
+        }
+    
+        .ti-pinterest:before {
+            content: "\e731";
+        }
+    
+        .btn_get_two {
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            background: #5e2ced;
+            border-color: #5e2ced;
+            color: #fff;
+        }
+    
+        .btn_get_two:hover {
+            background: transparent;
+            color: #5e2ced;
+        }
+    
+        .new_footer_top .f_social_icon a:hover {
+            background: #5e2ced;
+            border-color: #5e2ced;
+            color: white;
+        }
+    
+        .new_footer_top .f_social_icon a+a {
+            margin-left: 4px;
+        }
+    
+        .new_footer_top .f-title {
+            margin-bottom: 30px;
+            color: #263b5e;
+        }
+    
+        .f_600 {
+            font-weight: 600;
+        }
+    
+        .f_size_18 {
+            font-size: 18px;
+        }
+    
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: #4b505e;
+        }
+    
+        .new_footer_top .f_widget.about-widget .f_list li a {
+            color: #6a7695;
+        }
+    
+        .copyright {
+            text-align: center !important;
+        }
+    
+        .new_footer_top .footer_bg {
+            position: absolute;
+            bottom: 0;
+            background: url("http://droitthemes.com/html/saasland/img/seo/footer_bg.png") no-repeat scroll center 0;
+            width: 100%;
+            height: 266px;
+        }
+    
+        .new_footer_top .footer_bg .footer_bg_one {
+            background: url("https://1.bp.blogspot.com/-mvKUJFGEc-k/XclCOUSvCnI/AAAAAAAAUAE/jnBSf6Fe5_8tjjlKrunLBXwceSNvPcp3wCLcBGAsYHQ/s1600/volks.gif") no-repeat center center;
+            width: 330px;
+            height: 105px;
+            background-size: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 30%;
+            -webkit-animation: myfirst 22s linear infinite;
+            animation: myfirst 22s linear infinite;
+        }
+    
+        .new_footer_top .footer_bg .footer_bg_two {
+            background: url("https://1.bp.blogspot.com/-hjgfxUW1o1g/Xck--XOdlxI/AAAAAAAAT_4/JWYFJl83usgRFMvRfoKkSDGd--_Sv04UQCLcBGAsYHQ/s1600/cyclist.gif") no-repeat center center;
+            width: 88px;
+            height: 100px;
+            background-size: 100%;
+            bottom: 0;
+            left: 38%;
+            position: absolute;
+            -webkit-animation: myfirst 30s linear infinite;
+            animation: myfirst 30s linear infinite;
+        }
+    
+    
+    
+        @-moz-keyframes myfirst {
+            0% {
+                left: -25%;
+            }
+    
+            100% {
+                left: 100%;
+            }
+        }
+    
+        @-webkit-keyframes myfirst {
+            0% {
+                left: -25%;
+            }
+    
+            100% {
+                left: 100%;
+            }
+        }
+    
+        @keyframes myfirst {
+            0% {
+                left: -25%;
+            }
+    
+            100% {
+                left: 100%;
+            }
+        }
+    
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="logo">
+        <img src="logo.png" alt="CleaningGO" height="80" width="140">
+      </div>
+    
+      <div class="menu">
+      <ul>
+        <li><a href="home.html"><span class="nav-icons"><i class="fa fa-home " aria-hidden="true"></i></span>HOME</a></li>
+        <li><a href="payment_form_ARUN.html"><span class="nav-icons"><i class="fa fa-file "
+                aria-hidden="true"></i></span>COMPLAIN</a></li>
+        <li><a href="TableMinorProject.html"><span class="nav-icons"><i class="fa fa-check-circle"
+                aria-hidden="true"></i></span>STATUS</a></li>
+        <li><a href="feedback_form2.html"><span class="nav-icons"><i class="fa fa-address-card "
+                aria-hidden="true"></i></span>FEEDBACK</a></li>
+      
+      </ul>
+      </div>
+      <div class="login">
+        <button type="button" class="btn btn-info btn-round" data-toggle="modal" data-target="#loginModal">Login</button>
+      </div>
+    </div>
+    
+    <div class="track_status">
+      <h2>TRACK STATUS</h2>
+    </div>
+    <label>Show Entries<select name="trackStatusList_length" aria-controls="trackStatusList" class="form-control input-sm"
+        style="height: 40px; width: 70px">
+        <option value="10">10</option>
+        <option value="25">25</option>
+        <option value="50">50</option>
+        <option value="100">100</option>
+      </select>
+    </label>
+    <label id="search">Search:<input type="search" class="form-control input-sm" placeholder=""
+        aria-controls="trackStatusList" /></label>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Token</th>
+          <th scope="col">Location</th>
+          <th scope="col">Application Date</th>
+          <th scope="col">Status</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1502748</th>
+          <td>Adarsh Nagar, Jalandhar</td>
+          <td>27-01-2022</td>
+          <div id="status">
+            <td style="
+                    display: inline;
+                    padding: 0.2em 0.2em 0.2em;
+                    line-height: normal;
+                    color: white;
+                    background-color: greenyellow;
+                    text-align: center;
+                    white-space: nowrap;
+                    vertical-align: center;
+                    border-radius: 0.25em;
+                  ">
+              Success
+            </td>
+          </div>
+          <td style="text-align: center" data-bs-toggle="tooltip" data-bs-placement="right" title="success">
+            <i class="far fa-eye" id="togglePassword" style="margin-left: -30px; cursor: pointer">
+            </i>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">1502808</th>
+          <td>Sadar Bazaar,Jalandhar Cantt</td>
+          <td>05-02-2022</td>
+          <td style="
+                  display: inline;
+                  padding: 0.2em 0.2em 0.2em;
+                  line-height: normal;
+                  color: white;
+                  background-color: greenyellow;
+                  text-align: center;
+                  white-space: nowrap;
+                  vertical-align: baseline;
+                  border-radius: 0.25em;
+                ">
+            Success
+          </td>
+          <td style="text-align: center" data-bs-toggle="tooltip" data-bs-placement="right" title="success">
+            <i class="far fa-eye" id="togglePassword" style="margin-left: -30px; cursor: pointer"></i>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">1529868</th>
+          <td>Rai Bazaar,Pune</td>
+          <td>19-02-2022</td>
+          <td style="
+                  display: inline;
+                  padding: 0.2em 0.2em 0.2em;
+                  line-height: normal;
+                  color: white;
+                  background-color: rgb(96, 180, 201);
+                  text-align: center;
+                  white-space: nowrap;
+                  vertical-align: baseline;
+                  border-radius: 0.25em;
+                ">
+            In Progress
+          </td>
+          <td style="text-align: center" data-bs-toggle="tooltip" data-bs-placement="right" title="In Progress">
+            <i class="far fa-eye" id="togglePassword" style="margin-left: -30px; cursor: pointer"></i>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">1600032</th>
+          <td>Basant Chowk,Pune</td>
+          <td>20-03-2022</td>
+          <td style="
+                  display: inline;
+                  padding: 0.2em 0.2em 0.2em;
+                  line-height: normal;
+                  color: white;
+                  background-color: rgb(96, 180, 201);
+                  text-align: center;
+                  white-space: nowrap;
+                  vertical-align: baseline;
+                  border-radius: 0.25em;
+                ">
+            In Progress
+          </td>
+          <td style="text-align: center" data-bs-toggle="tooltip" data-bs-placement="right" title="In Progress">
+            <i class="far fa-eye" id="togglePassword" style="margin-left: -30px; cursor: pointer"></i>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">1601098</th>
+          <td>Pir Dargah,Pune</td>
+          <td>27-03-2022</td>
+          <td style="
+                  display: inline;
+                  padding: 0.2em 0.2em 0.2em;
+                  line-height: normal;
+                  color: white;
+                  background-color: #ff904b;
+                  text-align: center;
+                  white-space: nowrap;
+                  vertical-align: baseline;
+                  border-radius: 0.25em;
+                ">
+            Pending
+          </td>
+          <td style="text-align: center" data-bs-toggle="tooltip" data-bs-placement="right" title="Pending">
+            <i class="far fa-eye" id="togglePassword" style="margin-left: -30px; cursor: pointer"></i>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">1782541</th>
+          <td>Curo Point,Pune</td>
+          <td>31-03-2022</td>
+          <td style="
+                  display: inline;
+                  padding: 0.2em 0.2em 0.2em;
+                  line-height: normal;
+                  color: white;
+                  background-color: #ff904b;
+                  text-align: center;
+                  white-space: nowrap;
+                  vertical-align: baseline;
+                  border-radius: 0.25em;
+                ">
+            Pending
+          </td>
+          <td style="text-align: center" data-bs-toggle="tooltip" data-bs-placement="right" title="Pending">
+            <i class="far fa-eye" id="togglePassword" style="margin-left: -30px; cursor: pointer"></i>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">1845207</th>
+          <td>Railway Station,Pune</td>
+          <td>31-03-2022</td>
+          <td style="
+                  display: inline;
+                  padding: 0.2em 0.2em 0.2em;
+                  line-height: normal;
+                  color: white;
+                  background-color: rgb(96, 180, 201);
+                  text-align: center;
+                  white-space: nowrap;
+                  vertical-align: baseline;
+                  border-radius: 0.25em;
+                ">
+            In Progress
+          </td>
+          <td style="text-align: center" data-bs-toggle="tooltip" data-bs-placement="right" title="In Progress">
+            <i class="far fa-eye" id="togglePassword" style="margin-left: -30px; cursor: pointer"></i>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">1845483</th>
+          <td>Shailja Market,Pune</td>
+          <td>04-03-2022</td>
+          <td style="
+                  display: inline;
+                  padding: 0.2em 0.2em 0.2em;
+                  line-height: normal;
+                  color: white;
+                  background-color: #ff904b;
+                  text-align: center;
+                  white-space: nowrap;
+                  vertical-align: baseline;
+                  border-radius: 0.25em;
+                ">
+            Pending
+          </td>
+          <td style="text-align: center" data-bs-toggle="tooltip" data-bs-placement="right" title="Pending">
+            <i class="far fa-eye" id="togglePassword" style="margin-left: -30px; cursor: pointer"></i>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <section class="footer">
+    <footer class="new_footer_area bg_color">
+      <div class="new_footer_top">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-md-6">
+              <div class="f_widget company_widget wow fadeInLeft" data-wow-delay="0.2s"
+                style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInLeft;">
+                <!-- <h3 class="f-title f_600 t_color f_size_18">Get in Touch</h3> -->
+                <!-- <p>Don’t miss any updates of our new templates and extensions.!</p> -->
+                <!-- <form action="#" class="f_subscribe_two mailchimp" method="post" novalidate="true" _lpchecked="1"> -->
+                <!-- <input type="text" name="EMAIL" class="form-control memail" placeholder="Email"> -->
+                <!-- <button class="btn btn_get btn_get_two" type="submit">Subscribe</button> -->
+                <!-- <p class="mchimp-errmessage" style="display: none;"></p>
+                                          <p class="mchimp-sucmessage" style="display: none;"></p>
+                                      </form> -->
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <!-- <div class="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInLeft;">
+                                      <h3 class="f-title f_600 t_color f_size_18">Download</h3>
+                                      <ul class="list-unstyled f_list">
+                                          <li><a href="#">Company</a></li>
+                                          <li><a href="#">Android App</a></li>
+                                          <li><a href="#">ios App</a></li>
+                                          <li><a href="#">Desktop</a></li>
+                                          <li><a href="#">Projects</a></li>
+                                          <li><a href="#">My tasks</a></li>
+                                      </ul>
+                                  </div> -->
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <!-- <div class="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInLeft;">
+                                      <h3 class="f-title f_600 t_color f_size_18">Help</h3>
+                                      <ul class="list-unstyled f_list">
+                                          <li><a href="#">FAQ</a></li>
+                                          <li><a href="#">Term &amp; conditions</a></li>
+                                          <li><a href="#">Reporting</a></li>
+                                          <li><a href="#">Documentation</a></li>
+                                          <li><a href="#">Support Policy</a></li>
+                                          <li><a href="#">Privacy</a></li>
+                                      </ul>
+                                  </div> -->
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="f_widget social-widget pl_70 wow fadeInLeft" data-wow-delay="0.8s"
+                style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInLeft;">
+                <!-- <h3 class="f-title f_600 t_color f_size_18">Team Solutions</h3> -->
+  
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer_bg">
+          <div class="footer_bg_one"></div>
+  
+          <div class="footer_bg_two"></div>
+        </div>
+      </div>
+      <div class="footer_bottom">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-6 col-sm-7">
+              <h6 class="mb-0 f_400 copyright" text-align:center>© CleaningGo Inc.. 2022 All rights reserved.</h6>
+            </div>
+            <div class="col-lg-6 col-sm-5 text-right">
+              <!-- <p>Made with <i class="icon_heart"></i> in <a href="http://cakecounter.com" target="_blank">CakeCounter</a></p> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    </section>
+    
+  </body>
+</html>

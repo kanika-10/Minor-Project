@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minor Project</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.jpeg">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.jpeg">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.jpeg">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="manifest" href="assets/logo/favicon_io/site.webmanifest">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+<link rel="stylesheet" type="text/css" href="nav.css">
+<!-- connect css file with html useing link tag -->
+<link rel="stylesheet" type="text/css"
+    href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- link this font-awesome icon css link with html file for accessing all fornt awesome
+        icon form boostrapcdn.com -->
+
+    <style>
+        body {
+            background: #fbfbfd;
+        }
+    
+        .new_footer_area {
+            background: #fbfbfd;
+        }
+    
+    
+        .new_footer_top {
+            padding: 20px 0px 200px;
+            position: relative;
+            overflow-x: hidden;
+        }
+    
+        .new_footer_area .footer_bottom {
+            padding-top: 5px;
+            padding-bottom: 50px;
+        }
+    
+        .footer_bottom {
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 20px;
+            color: #7f88a6;
+            padding: 27px 0px;
+        }
+    
+        .new_footer_top .company_widget p {
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 28px;
+            color: #6a7695;
+            margin-bottom: 20px;
+        }
+    
+        .new_footer_top .company_widget .f_subscribe_two .btn_get {
+            border-width: 1px;
+            margin-top: 20px;
+        }
+    
+        .btn_get_two:hover {
+            background: transparent;
+            color: #5e2ced;
+        }
+    
+        .btn_get:hover {
+            color: #fff;
+            background: #6754e2;
+            border-color: #6754e2;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+        }
+    
+        a:hover,
+        a:focus,
+        .btn:hover,
+        .btn:focus,
+        button:hover,
+        button:focus {
+            text-decoration: none;
+            outline: none;
+        }
+    
+    
+    
+        .new_footer_top .f_widget.about-widget .f_list li a:hover {
+            color: #5e2ced;
+        }
+    
+        .new_footer_top .f_widget.about-widget .f_list li {
+            margin-bottom: 11px;
+        }
+    
+        .f_widget.about-widget .f_list li:last-child {
+            margin-bottom: 0px;
+        }
+    
+        .f_widget.about-widget .f_list li {
+            margin-bottom: 15px;
+        }
+    
+        .f_widget.about-widget .f_list {
+            margin-bottom: 0px;
+        }
+    
+        .new_footer_top .f_social_icon a {
+            width: 44px;
+            height: 44px;
+            line-height: 43px;
+            background: transparent;
+            border: 1px solid #e2e2eb;
+            font-size: 24px;
+           
+            margin-left: 100px;
+            padding-left: 100px;
+            padding-right: 120px;
+        }
+    
+        .f_social_icon a {
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            font-size: 14px;
+            line-height: 45px;
+            color: #858da8;
+            display: inline-block;
+            background: #ebeef5;
+            text-align: center;
+            -webkit-transition: all 0.2s linear;
+            -o-transition: all 0.2s linear;
+            transition: all 0.2s linear;
+        }
+    
+        .ti-facebook:before {
+            content: "\e741";
+        }
+    
+        .ti-twitter-alt:before {
+            content: "\e74b";
+        }
+    
+        .ti-vimeo-alt:before {
+            content: "\e74a";
+        }
+    
+        .ti-pinterest:before {
+            content: "\e731";
+        }
+    
+        .btn_get_two {
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            background: #5e2ced;
+            border-color: #5e2ced;
+            color: #fff;
+        }
+    
+        .btn_get_two:hover {
+            background: transparent;
+            color: #5e2ced;
+        }
+    
+        .new_footer_top .f_social_icon a:hover {
+            background: #5e2ced;
+            border-color: #5e2ced;
+            color: white;
+        }
+    
+        .new_footer_top .f_social_icon a+a {
+            margin-left: 4px;
+        }
+    
+        .new_footer_top .f-title {
+            margin-bottom: 30px;
+            color: #263b5e;
+        }
+    
+        .f_600 {
+            font-weight: 600;
+        }
+    
+        .f_size_18 {
+            font-size: 18px;
+        }
+    
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: #4b505e;
+        }
+    
+        .new_footer_top .f_widget.about-widget .f_list li a {
+            color: #6a7695;
+        }
+    
+        .copyright {
+            text-align: center !important;
+        }
+    
+        .new_footer_top .footer_bg {
+            position: absolute;
+            bottom: 0;
+            background: url("http://droitthemes.com/html/saasland/img/seo/footer_bg.png") no-repeat scroll center 0;
+            width: 100%;
+            height: 266px;
+        }
+    
+        .new_footer_top .footer_bg .footer_bg_one {
+            background: url("https://1.bp.blogspot.com/-mvKUJFGEc-k/XclCOUSvCnI/AAAAAAAAUAE/jnBSf6Fe5_8tjjlKrunLBXwceSNvPcp3wCLcBGAsYHQ/s1600/volks.gif") no-repeat center center;
+            width: 330px;
+            height: 105px;
+            background-size: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 30%;
+            -webkit-animation: myfirst 22s linear infinite;
+            animation: myfirst 22s linear infinite;
+        }
+    
+        .new_footer_top .footer_bg .footer_bg_two {
+            background: url("https://1.bp.blogspot.com/-hjgfxUW1o1g/Xck--XOdlxI/AAAAAAAAT_4/JWYFJl83usgRFMvRfoKkSDGd--_Sv04UQCLcBGAsYHQ/s1600/cyclist.gif") no-repeat center center;
+            width: 88px;
+            height: 100px;
+            background-size: 100%;
+            bottom: 0;
+            left: 38%;
+            position: absolute;
+            -webkit-animation: myfirst 30s linear infinite;
+            animation: myfirst 30s linear infinite;
+        }
+    
+    
+    
+        @-moz-keyframes myfirst {
+            0% {
+                left: -25%;
+            }
+    
+            100% {
+                left: 100%;
+            }
+        }
+    
+        @-webkit-keyframes myfirst {
+            0% {
+                left: -25%;
+            }
+    
+            100% {
+                left: 100%;
+            }
+        }
+    
+        @keyframes myfirst {
+            0% {
+                left: -25%;
+            }
+    
+            100% {
+                left: 100%;
+            }
+        }
+    
+        /*************footer End*****************/
+    </style>
+
+
+
+
+
+
+
+</head>
+<body>
+    <div class="main">
+        <div class="navbar">
+            <div class="logo">
+                <img src="logo.png" alt="CleaningGO" height="80" width= "140">
+            </div>
+    
+            <div class="menu">
+                <ul>
+                    <li><a href="home.html"><span class="nav-icons"><i class="fa fa-home " aria-hidden="true"></i></span>HOME</a></li>
+                    <li><a href="payment_form_ARUN.html"><span class="nav-icons"><i class="fa fa-file " aria-hidden="true"></i></span>COMPLAIN</a></li>
+                    <li><a href="TableMinorProject.html"><span class="nav-icons"><i class="fa fa-check-circle" aria-hidden="true"></i></span>STATUS</a></li>
+                    <li><a href="feedback_form2.html"><span class="nav-icons"><i class="fa fa-address-card " aria-hidden="true"></i></span>FEEDBACK</a></li>
+                    
+                </ul>
+            </div>
+            <div class="login">     
+                <button type="button" class="btn btn-info btn-round" data-toggle="modal" data-target="#loginModal">Login</button>
+            </div>
+        </div>
+
+
+
+
+        
+
+
+
+    <section class="carousel-main">
+    <section class="carousel" aria-label="Gallery">
+        <ol class="carousel__viewport">
+            <li id="carousel__slide1" tabindex="0" class="carousel__slide">
+                <div class="carousel__snapper">
+                    <a href="#carousel__slide4" class="carousel__prev"></a>
+                    <a href="#carousel__slide2" class="carousel__next"></a>
+                </div>
+            </li>
+            <li id="carousel__slide2" tabindex="0" class="carousel__slide">
+                <div class="carousel__snapper"></div>
+                <a href="#carousel__slide1" class="carousel__prev"></a>
+                <a href="#carousel__slide3" class="carousel__next"></a>
+            </li>
+            <li id="carousel__slide3" tabindex="0" class="carousel__slide">
+                <div class="carousel__snapper"></div>
+                <a href="#carousel__slide2" class="carousel__prev"></a>
+                <a href="#carousel__slide4" class="carousel__next"></a>
+            </li>
+            <li id="carousel__slide4" tabindex="0" class="carousel__slide">
+                <div class="carousel__snapper"></div>
+                <a href="#carousel__slide3" class="carousel__prev"></a>
+                <a href="#carousel__slide1" class="carousel__next"></a>
+            </li>
+        </ol>
+        <aside class="carousel__navigation">
+            <ol class="carousel__navigation-list">
+                <li class="carousel__navigation-item">
+                    <a href="#carousel__slide1" class="carousel__navigation-button "></a>
+                </li>
+                <li class="carousel__navigation-item">
+                    <a href="#carousel__slide2" class="carousel__navigation-button slide2"></a>
+                </li>
+                <li class="carousel__navigation-item">
+                    <a href="#carousel__slide3" class="carousel__navigation-button"></a>
+                </li>
+                <li class="carousel__navigation-item">
+                    <a href="#carousel__slide4" class="carousel__navigation-button"></a>
+                </li>
+            </ol>
+        </aside>
+    </section>
+    </section>
+    <section class="articles">
+    <div class="container">
+        <div class="card">
+            <div class="box">
+                <div class="content">
+                    <h2>01</h2>
+                    <h3>Challenges and opportunities associated with waste management</h3>
+                    <p>India faces major environmental challenges associated with waste generation and inadequate waste collection, transport,
+                    treatment and disposal. Current systems in India cannot cope with the volumes of waste generated by an increasing urban
+                    population, and this impacts on the environment and public health.</p>
+                    <a href="https://royalsocietypublishing.org/doi/10.1098/rsos.160764">Read More</a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="box">
+                <div class="content">
+                    <h2>02</h2>
+                    <h3>Swachh Bharat Abhiyan</h3>
+                    <p>Swachh Bharat Abhiyan is one of the many famous and vital missions in the History of India. This campaign was announced
+                    on August 15, 2014, and it was introduced by our honorable Prime Minister, Narendra Modi. It was launched on October 2,
+                    2014, to honor Mahatma Gandhi’s vision of a cleanness. Swachh Bharat Abhiyan was done on a national level and
+                    encompassed all the towns and villages.</p>
+                    <a href="https://www.aplustopper.com/article-on-swachh-bharat-abhiyan/">Read More</a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="box">
+                <div class="content">
+                    <h2>03</h2>
+                    <h3>Clean it Right: Dumpsite Management in India</h3>
+                    <p>A combination of uncontrolled dumping of mixed municipal waste at designated dumpsites as well as at garbage-vulnerable
+                    points for decades, aided by flawed laws, has created around 3,159 dumpsites in India.</p>
+                    <a href="http://www.indiaenvironmentportal.org.in/content/472142/clean-it-right-dumpsite-management-in-india/">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+    </div>
+    <section class="aboutus">
+    <div class="container">
+        
+        <div class="about-us ">
+            <div class="who-we-are">
+                <h3 class="who-we-are-heading">About us</h3>
+                <span>We are 3 rd year students of NIT Jalandhar.We are building this website as a team project.The work which we have done till now that is the frontend part is done by all four members. We distributed the work of designing the website among ourselves equally.</span>
+            </div>
+            <div class="cards">
+                <div class="card">
+                    <div class="card-img card-img1"></div>
+                    <div class="card-body">
+                        <h3>Kanika Mehrotra</h3>
+                        <span>Web developer</span>
+                        
+                    </div>
+                </div>
+    
+    
+                <div class="card">
+                    <div class="card-img card-img2"></div>
+                    <card class="card-body">
+                        <div class="card-body">
+                        <h3>Harsh Takhi</h3>
+                        <span>Web developer</span>
+                        </div>
+                    </card>
+                </div>
+    
+                <div class="card">
+                    <div class="card-img card-img3"></div>
+                    <card class="card-body">
+                        <div class="card-body">
+                        <h3>Aishwarya V Meshram</h3>
+                        <span>Web developer</span>
+                        </div>
+                    </card>
+                </div>
+    
+                <div class="card">
+                    <div class="card-img card-img4"></div>
+                    <card class="card-body">
+                        <div class="card-body">
+                        <h3>Arun Kumar</h3>
+                        <span>Web developer</span>
+                        </div>
+                    </card>
+                </div>
+    
+    
+            </div>
+    
+
+        </div>
+    </section>
+    <section class="footer">
+        <footer class="new_footer_area bg_color">
+            <div class="new_footer_top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6">
+                            <div class="f_widget company_widget wow fadeInLeft" data-wow-delay="0.2s"
+                                style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInLeft;">
+                                
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="f_widget social-widget pl_70 wow fadeInLeft" data-wow-delay="0.8s"
+                                style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInLeft;">
+                                
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer_bg">
+                    <div class="footer_bg_one"></div>
+        
+                    <div class="footer_bg_two"></div>
+                </div>
+            </div>
+            <div class="footer_bottom">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 col-sm-7">
+                            <h6 class="mb-0 f_400 copyright" text-align:center>© CleaningGo Inc.. 2022 All rights reserved.</h6>
+                        </div>
+                        <div class="col-lg-6 col-sm-5 text-right">
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </section>
+    
+    
+</body>
+</html>
