@@ -20,7 +20,17 @@
     href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <!-- link this font-awesome icon css link with html file for accessing all fornt awesome
         icon form boostrapcdn.com -->
+<!-- Latest compiled and minified CSS -->
 
+
+<!-- jQuery library -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
     <style>
         body {
             background: #fbfbfd;
@@ -270,7 +280,107 @@
         }
     
         /*************footer End*****************/
+        
+        .popup{
+            position: absolute;
+            top:55%;
+            left:86%;
+            opacity: 0;
+            transform:translate(-50%,-50%) scale(1.25);
+            width: 300px;
+            height: 375px;
+            padding: 20px 30px;
+            background: #fff;
+            box-shadow:2px 2px 5px 5px rgba(0,0,0,0.15) ;
+            border-radius: 10px;
+            transition: top 0ms ease-in-out 200ms,
+                        opacity 200ms ease-in-out 0ms,
+                        transform 20ms ease-in-out 0ms;
+            z-index: 999;
+        }
+        .popup.active{
+            top:55%;
+            left:86%;
+            width: 300px;
+            height: 375px;
+            opacity: 1;
+            transform:translate(-50%,-50%) scale(1.25);
+            transition: top 0ms ease-in-out 0ms,
+                        opacity 200ms ease-in-out 0ms,
+                        transform 20ms ease-in-out 0ms;
+        }
+        .popup .close-btn{
+            position: absolute;
+            top: 10px;
+            right:10px;
+            width:15px;
+            height:15px;
+            background: #888;
+            color:#eee;
+            text-align: center;
+            line-height: 15px;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+
+        .popup .form h2{
+            text-align:center;
+            color:#222;
+            margin:10px 0px 20px;
+            font-size: 25px;
+        }
+
+        .popup .form .form-element {
+            margin:15px 0px;
+        }
+
+        .popup .form .form-element label{
+            font-size: 14px;
+            color: #222;
+        }
+
+        .popup .form .form-element input[type = 'tel'],
+        .popup .form .form-element input[type = 'password']{
+            margin-top:5px;
+            display: block;
+            width: 100%;
+            padding: 10px;
+            outline: none;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+        }
+        .popup .form .form-element input[type='checkbox']
+        {
+            margin-right:5px;
+
+        }
+
+        .popup .form .form-element button{
+            width: 100%;
+            height: 40px;
+            border: none;
+            outline: none;
+            display: block;
+            font-size: 16px;
+            background: #222;
+            color: #f5f5f5;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .popup .form .form-element a{
+            display: block;
+            text-align: right;
+            font-size: 15px;
+            color: #1a79ca;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+
+        
     </style>
+    
 
 
 
@@ -296,7 +406,31 @@
                 </ul>
             </div>
             <div class="login">     
-                <button type="button" class="btn btn-info btn-round" data-toggle="modal" data-target="#loginModal">Login</button>
+                <button type="button" class="btn btn-info btn-round" id="show-login">Login</button>
+                <div class="popup">
+                    <div class="close-btn">&times;</div>
+                    <div class="form">
+                        <h2>Login</h2>
+                        <div class="form-element">
+                            <label for="phone">Phone no.</label>
+                            <input type="tel" id="phone" placeholder="Enter Phone no.">
+                        </div>
+                        <div class="form-element">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" placeholder="Enter Password">
+                        </div>
+                        <div class="form-element">
+                            <input type="checkbox" id="remember-me">
+                            <label for="remember-me">Remember Me</label>
+                        </div>
+                        <div class="form-element">
+                            <button>Sign-in</button>
+                        </div>
+                        <div class="form-element">
+                            <a href="#">Forgot password?</a>
+                        </div>
+                    </div>
+                </div>              
             </div>
         </div>
 
@@ -496,6 +630,6 @@
 
     </section>
     
-    
+    <script src="home.js"></script>
 </body>
 </html>
