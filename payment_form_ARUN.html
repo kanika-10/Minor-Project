@@ -141,6 +141,7 @@ input[type="date"],
 input[type="file"],
 input[type="email"],
 input[type="password"],
+input[type="tel"],
 select,
 textarea {
     width: 100%;
@@ -476,37 +477,33 @@ body {
     </div>
   </div>
   <div class="container">
-    <form action="">
-  <h1 class="main">Complaint Box</h1>
+    <form action="https://formspree.io/f/mwkyaaje" method="POST" accept-charset="utf-8" enctype="multipart/form-data">
+  <h1 class="main" >Complaint Box</h1>
   <hr>
   <p class="headings">Form description </p>
-<textarea name="Address" id="Address" cols="100" rows="5" placeholder="Form description"></textarea>
+<textarea name="text" id="text" cols="100" rows="5" placeholder="Form description"></textarea>
   <p class="headings">Name <span class="req">*</span></p>
-  <input type="text" value="" required placeholder="Enter your name">
+  <input type="text" value="" name="name" required placeholder="Enter your name">
 
   <p>Phone No.<span class="req">*</span></p>
-    <input type="email" name="email" id="email" required placeholder="Enter your phone number">
+    <input type="tel" name="tel" id="tel" required placeholder="Enter your phone number">
   
   <p class="headings">Additional Phone No.</p>
-    <input type="email" name="email" id="email" placeholder="Enter your Sibling number">
+    <input type="tel" name="tel" id="tel" placeholder="Enter addtional number">
   <p class="headings">Address <span class="req">*</span></p>
   <textarea name="Address" id="Address" cols="100" rows="5" placeholder="Enter Your Address"></textarea>
 <p class="headings">Landmark<span class="req" >*</span></p> 
-  <input type="number" value="pincode" id="pincode" required placeholder="Landmark Location">
+  <input type="text" id="text" name="landmark" required placeholder="Landmark">
 <p class="headings"> City and state<span class="req">*</span> </p>
-  <input type="email" name="email" id="email" required placeholder="City and state">
+   <input type="text"  id="text" name="city and state" required placeholder="City and State">
 <p class="headings">Pin Code </p>
-  <input type="email" name="email" id="email" required placeholder="eg.144032">
-<p class="headings" >Garbage Image<span class="req">*</span></p>
+  <input type="number" name="number" id="number" required placeholder="eg.144032">
+<label for='upload' class="headings" >Garbage Image<span class="req">*</span></label>
 </p>
-<form>
-  <input  class="spacial" type="file" id="myFile" name="filename" required>
-</form>
-<p class="headings">Landmark Image</p>
-<form>
-  <input class="spacial" type="file" id="myFile" name="filename">
-</form>
-<input type="submit" value="Submit">
+<input  class="spacial" type="file" id="myFile" name="upload" required>
+<label for='upload' class="headings">Landmark Image</label>
+  <input class="spacial" type="file" id="myFile" name="upload">
+<button type="submit" name='submit' value="Submit" id="complaintForm" style="width:98.5%;font-size:20px;margin-left: 100px;margin:10px;padding:10px;font-family:sans-serif;background-color: rgb(51, 226, 51);">Submit</button>
 </form>
 </div>
 <section class="footer">
@@ -517,46 +514,19 @@ body {
           <div class="col-lg-3 col-md-6">
             <div class="f_widget company_widget wow fadeInLeft" data-wow-delay="0.2s"
               style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInLeft;">
-              <!-- <h3 class="f-title f_600 t_color f_size_18">Get in Touch</h3> -->
-              <!-- <p>Don’t miss any updates of our new templates and extensions.!</p> -->
-              <!-- <form action="#" class="f_subscribe_two mailchimp" method="post" novalidate="true" _lpchecked="1"> -->
-              <!-- <input type="text" name="EMAIL" class="form-control memail" placeholder="Email"> -->
-              <!-- <button class="btn btn_get btn_get_two" type="submit">Subscribe</button> -->
-              <!-- <p class="mchimp-errmessage" style="display: none;"></p>
-                                        <p class="mchimp-sucmessage" style="display: none;"></p>
-                                    </form> -->
+              
             </div>
           </div>
           <div class="col-lg-3 col-md-6">
-            <!-- <div class="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInLeft;">
-                                    <h3 class="f-title f_600 t_color f_size_18">Download</h3>
-                                    <ul class="list-unstyled f_list">
-                                        <li><a href="#">Company</a></li>
-                                        <li><a href="#">Android App</a></li>
-                                        <li><a href="#">ios App</a></li>
-                                        <li><a href="#">Desktop</a></li>
-                                        <li><a href="#">Projects</a></li>
-                                        <li><a href="#">My tasks</a></li>
-                                    </ul>
-                                </div> -->
+            
           </div>
           <div class="col-lg-3 col-md-6">
-            <!-- <div class="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInLeft;">
-                                    <h3 class="f-title f_600 t_color f_size_18">Help</h3>
-                                    <ul class="list-unstyled f_list">
-                                        <li><a href="#">FAQ</a></li>
-                                        <li><a href="#">Term &amp; conditions</a></li>
-                                        <li><a href="#">Reporting</a></li>
-                                        <li><a href="#">Documentation</a></li>
-                                        <li><a href="#">Support Policy</a></li>
-                                        <li><a href="#">Privacy</a></li>
-                                    </ul>
-                                </div> -->
+            
           </div>
           <div class="col-lg-3 col-md-6">
             <div class="f_widget social-widget pl_70 wow fadeInLeft" data-wow-delay="0.8s"
               style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInLeft;">
-              <!-- <h3 class="f-title f_600 t_color f_size_18">Team Solutions</h3> -->
+              
 
             </div>
           </div>
@@ -575,7 +545,7 @@ body {
             <h6 class="mb-0 f_400 copyright" text-align:center>© CleaningGo Inc.. 2022 All rights reserved.</h6>
           </div>
           <div class="col-lg-6 col-sm-5 text-right">
-            <!-- <p>Made with <i class="icon_heart"></i> in <a href="http://cakecounter.com" target="_blank">CakeCounter</a></p> -->
+            
           </div>
         </div>
       </div>
@@ -584,4 +554,8 @@ body {
   </section>
 
 </body>
+
+
+
+
 </html>
