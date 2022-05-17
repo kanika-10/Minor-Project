@@ -1133,19 +1133,19 @@ body {
     <div class="contact-block">
         
     
-        <form id="contact-form">
+        <form id="contact-form" action="https://formspree.io/f/xoqryybr" method="POST" >
             <div>
                 
             
-                <input type="text"required placeholder="Your Name"></div>
+                <input type="text" name='name' placeholder="Your Name" required></div>
         <div>
             
             
-            <input type="email"required placeholder="Your Email"></div>
+            <input id='email' type="email" name='email' placeholder="Your Email" required></div>
             <div>
                 
             
-            <input type="text"required placeholder="Message">
+            <input type="text" name='message' placeholder="Message" required>
             </div>
             <div id="submit-button" style="width:40%;font-family:sans-serif;">
                 <button id="send_message">
@@ -1276,5 +1276,6 @@ body {
 
     </main>
 <script type="text/javascript"src="new.js"></script>
+
 </body>
 </html>
